@@ -1,0 +1,5 @@
+version info
+Cent-Solve ver 0.1.0
+jQuery: 3.7.1 from ajax.googleapis.com
+BS-JS: 3.4.1 from maxcdn.bootstrapcdn.com
+BS-CSS: 3.4.1 from maxcdn.bootstrapcdn.com

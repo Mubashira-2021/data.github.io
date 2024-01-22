@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CentSolve Login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<link rel="SHORTCUT ICON" href="assets/img/deci_logo.png">
+		<style>
+			h1,h4 {
+			text-align: center;
+			}
+			
+			.ttl {
+			margin-top: 8px;
+			}
+			
+			.r {
+			color: #f00;
+			}
+			
+			.g {
+			color: #0f0;
+			}
+			
+			.b {
+			color: #00f;
+			}
+			
+			.x {
+			color: #000;
+			display: none;
+			}
+			
+			.logo_container {
+			text-align: center;
+			margin-top: 33px;
+			}
+			
+			.logo {
+			height: 99px;
+			border: 3px dashed #aaa;
+			border-radius: 50%;
+			padding: 8px;
+			background: #008000;
+			}
+			
+			body {
+			background: #ddd;
+			/*background-image: url("assets/img/greenwall.png");
+			background-repeat: repeat;*/
+			}
+			
+			@media only screen and (min-width: 700px) {
+			#login-box {
+			width: 333px;
+			}
+		</style>
+		<script>
+			$(function(){
+				const d = new Date();
+				let yr = d.getFullYear();
+				$('.c-yr').text(yr);
+				
+				setInterval(function() {
+					$('.x').css('color',$('.r').css('color'));
+					$('.r').css('color',$('.g').css('color'));
+					$('.g').css('color',$('.b').css('color'));
+					$('.b').css('color',$('.x').css('color'));
+				},500);
+				
+				$('#usrid').focus();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="logo_container"><img class="logo" src="assets/img/deci_logo.png"></div>
+		<h1 class="ttl">Cent<i class="x">:</i><i class="r">:</i><i class="g">:</i><i class="b">:</i>Solve</h1>
+		
+		<div class="container-fluid">
+			<div class="col-md-4"></div>
+			<div class="col-md-4" >
+				<div id="login-box" style="padding-top:30px;padding-bottom:25px;padding-left:25px;padding-right:25px;margin:auto;border-radius:15px;box-shadow: 0px 5px 15px #aaa;background: #aec5a7;background: #badfe5;border: 15px solid #4f8fa2;">
+					
+					<div class="form-group">
+						<div><label style="font-weight:300;" for="usrid">UserID</label></div>
+						<input type="text" id="usrid" spellcheck="false" style="border-radius:3px;font-weight:300;height:45px;font-size:16px;background: #e0f4f4;color: #940f0f;" class="form-control" placeholder="Enter UserID" name="usrid" autocomplete="off">
+					</div>
+					
+					<div class="form-group" style="margin-bottom:0px;">
+						<div><label style="font-weight:300;" for="email">Password</label></div>
+						<input type="password" id="pswd" style="border-radius:3px;font-weight:300;height:45px;font-size:16px;background: #e0f4f4;color: #940f0f;" class="form-control password" id="email" placeholder="Enter Password" name="email">
+						<div style="color:#5454cf;margin-top:5px;cursor:pointer;" id="chk_pscd">Show password</div>
+						<div style="text-align:right;">
+							<span style="background:#77d36e;color:#fff;border-radius:none;border:none;border-radius:3px;font-size:25px;padding:3px 9px;" id="Go" class="btn btn-default">Login</span>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div style="" class="col-md-8 blink">
+							<span style="display:none;" class="err_msg">Enter UserID</span>
+						</div>
+					</div>
+					
+					
+					<div style="margin-top:25px;font-size:16px;text-align:center;"><input type="checkbox" id="savLog"> <label for="savLog" style="cursor:pointer;font-weight:300;">Save login</label> | <span id="lost" title="Click [Forgot Password] option to create a new password for your exisitng account by using some verifications." style="cursor:pointer">Forgot password?</span></div>
+					
+					<div style="text-align:center;margin-top:5px;text-shadow: 0px 5px 4px #eee;"><b>&copy; <span class="c-yr"></span> | Data Decillion Pvt Ltd</b></div>
+					
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		
+		<h4></h4>
+	</body>
+</html>

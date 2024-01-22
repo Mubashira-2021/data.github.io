@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bismi</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<link rel="SHORTCUT ICON" href="assets/img/deci_logo.png">
+		<style>
+			h1,h4 {
+			text-align: center;
+			}
+			
+			.ttl {
+			margin-top: 8px;
+			}
+			
+			.r {
+			color: #f00;
+			}
+			
+			.g {
+			color: #0f0;
+			}
+			
+			.b {
+			color: #00f;
+			}
+			
+			.x {
+			color: #000;
+			display: none;
+			}
+			
+			.logo_container {
+			text-align: center;
+			margin-top: 63px;
+			}
+			
+			.logo {
+			height: 99px;
+			border: 3px dashed #aaa;
+			border-radius: 50%;
+			padding: 8px;
+			background: #008000;
+			}
+		</style>
+		<script>
+			$(function(){
+				const d = new Date();
+				let yr = d.getFullYear();
+				$('.c-yr').text(yr);
+				
+				setInterval(function() {
+					$('.x').css('color',$('.r').css('color'));
+					$('.r').css('color',$('.g').css('color'));
+					$('.g').css('color',$('.b').css('color'));
+					$('.b').css('color',$('.x').css('color'));
+				},500); 
+			});
+		</script>
+	</head>
+	<body>
+		<h1>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+		<div class="logo_container"><img class="logo" src="assets/img/deci_logo.png"></div>
+		<h1 class="ttl">Cent<i class="x">:</i><i class="r">:</i><i class="g">:</i><i class="b">:</i>Solve</h1>
+		<h4>&copy; <span class="c-yr"></span> | Data Decillion Pvt Ltd</h4>
+	</body>
+</html>
